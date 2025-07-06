@@ -1,0 +1,22 @@
+# Sanal ortam klasörü
+venv/
+
+# Büyük veri kümeleri ve indirilen dosyalar
+data/
+Fine_Tuning/data/
+*.zip
+*.tar.gz
+*.rar
+*.gz
+
+# Model ağırlıkları (eğer çok büyüklerse ve LFS kullanmayacaksanız)
+*.pth
+*.pt
+*.h5
+*.keras
+
+# Python ile ilgili genel olarak ignore edilecekler
+__pycache__/
+*.pyc
+.ipynb_checkpoints/ # Jupyter Notebook checkpoint dosyalari
+advanced-learning-algorithms-pytorch/

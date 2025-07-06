@@ -1,0 +1,1 @@
+Processes the input sequence and compresses it into a fixed-size vector, usually the
