@@ -14,7 +14,8 @@ attention_weights /= attention_weights.sum()
 
 pca = PCA(n_components=2)
 hidden_states_2d = pca.fit_transform(hidden_states)
-
+#safsdafdsgdsags
+#deneme git 
 df = pd.DataFrame({
     "char": chars,
     "attention": attention_weights,
