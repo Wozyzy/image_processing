@@ -24,12 +24,12 @@ test_data = datasets.MNIST(
 
 batch_size = 64
 
-# Training verisini %80 training, %20 validation olarak bölelim
+# Training verisini %80 training, %20 validation olarak bolelim
 train_size = int(0.8 * len(training_data))
 val_size = len(training_data) - train_size
 train_dataset, val_dataset = random_split(training_data, [train_size, val_size])
 
-# DataLoader'ları oluşturalım
+# DataLoader'lari olusturalim
 train_dataloader = DataLoader(train_dataset, batch_size=batch_size)
 val_dataloader = DataLoader(val_dataset, batch_size=batch_size)
 test_dataloader = DataLoader(test_data, batch_size=batch_size)
@@ -66,7 +66,7 @@ print(model)
 loss_fn = nn.CrossEntropyLoss()
 optimizer = torch.optim.SGD(model.parameters(), lr=1e-3)
 
-classes = [str(i) for i in range(10)]  # 0-9 arası rakamlar
+classes = [str(i) for i in range(10)]  # 0-9 arasi rakamlar
 
 def train(dataloader, model, loss_fn, optimizer):
     size = len(dataloader.dataset)
@@ -114,7 +114,7 @@ def validate(dataloader, model, loss_fn):
 
 def predict_png(model, device, classes, png_path="your_digit2.png"):
     if not os.path.exists(png_path):
-        print(f"{png_path} bulunamadı!")
+        print(f"{png_path} bulunamadi!")
         return
     transform = Compose([
         Grayscale(num_output_channels=1),
@@ -130,7 +130,7 @@ def predict_png(model, device, classes, png_path="your_digit2.png"):
         pred = output.argmax(1).item()
         print(f"your_digit.png tahmini: {classes[pred]}")
 
-# Eğitim döngüsü
+# Egitim dongusu
 epochs = 5
 for t in range(epochs):
     print(f"Epoch {t+1}\n-------------------------------")
